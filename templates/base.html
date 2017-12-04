@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+    <div id="masthead">
+        <div class="container">
+            <div class="row">
+                <h1>stack</a>
+                    <p id="logo" class="lead">The Trials of a Full-Stack Developer</p>
+                </h1>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+             <div class="panel">
+                <div class="panel-body">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+             </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+        </div>
+    </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
