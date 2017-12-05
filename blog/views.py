@@ -24,4 +24,6 @@ def post_detail(request, id):
         post is not found
         """
     post = get_object_or_404(Post, pk=id)
+    post.views += 1
+    post.save()
     return render(request, "postdetail.html",{'post':post})

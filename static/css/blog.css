@@ -4,7 +4,7 @@
 
 body {
     font-family: Arial;
-    padding-top: 50px;
+    padding-top: 0px;
 }
 
 footer {
@@ -104,6 +104,13 @@ a, a:hover {
     opacity: .9;
     padding: 6px;
     color: #fff;
+}
+
+nav.navbar.navbar-default {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0px;
 }
 
 @media screen and (min-width: 768px) {
