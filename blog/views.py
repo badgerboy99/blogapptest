@@ -27,3 +27,13 @@ def post_detail(request, id):
     post.views += 1
     post.save()
     return render(request, "postdetail.html",{'post':post})
+
+def views_list(request):
+    """
+        Create a view that will return a list of top 5 most popular
+        blog posts that were published prior to'now'
+        and render them to the 'blogposts.html' template
+        """
+    posts = Post.objects.filter(published_date__lte=timezone.now()
+         ).order_by('-views')
+    return render(request, "topfive.html", {'posts': posts})
