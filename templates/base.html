@@ -25,7 +25,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="/blog/">Blog list <span class="sr-only">(current)</span></a></li>
-        <li><a href="/topfive/">Most popular</a></li>
+        <li class="active"><a href="/topfive/">Most popular</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -37,6 +37,7 @@
                 <h1>stack</a>
                     <p id="logo" class="lead">The Trials of a Full-Stack Developer</p>
                 </h1>
+                <button class="btn btn-default" onclick="location.href='{% url 'new_post' %}'">New Post</button>
                 <hr>
             </div>
         </div>

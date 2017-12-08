@@ -10,13 +10,17 @@
                 <h3> {{ post.title }}</h3>
                 <div class="row">
                     <div class="col-xs-9">
+                        {% if post.image %}
+                            <img src="/media/{{ post.image }}">
+                        {% endif %}
                         <p> {{ post.content }}</p>
                         <p><button class="btn btn-default" onclick="location.href='/blog'">Back To Blog</button></p>
+                        <button class="btn btn-default" onclick="location.href='{% url 'edit' post.id %}'">Edit</button>
                         <p> {{ post.published_date }} | <strong>Views </strong> {{ post.views }} | <strong>Tag</strong> {{ post.tag }}</p>
                         <div class="spacer">
-                        {% load disqus_tags %}
-                        {% set_disqus_title post.title %}
-                        {% disqus_show_comments %}
+                            {% load disqus_tags %}
+                            {% set_disqus_title post.title %}
+                            {% disqus_show_comments %}
                         </div>
                     </div>
                 </div>

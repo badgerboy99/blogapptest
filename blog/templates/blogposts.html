@@ -1,7 +1,9 @@
 {% extends "base.html" %}>
 
 {% block content %}
+
     {% for post in posts %}
+
         <div class="row">
             <div class="col-md-2 col-sm-3 text-center">
                 <a class="story-img" href="#">
@@ -18,5 +20,6 @@
                 </div> <!--end inner row-->
             </div>
         </div> <!--end outer row-->
+        <hr>
     {% endfor %}
 {% endblock %}

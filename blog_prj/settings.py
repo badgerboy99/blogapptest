@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'django.contrib.sites',
     'disqus',
+    'django_forms_bootstrap',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,6 @@ STATICFILES_DIRS = (
 
 DISQUS_WEBSITE_SHORTNAME = 'bloggetyblogblog'
 SITE_ID = 1
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
